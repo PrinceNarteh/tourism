@@ -9,7 +9,7 @@ const SidebarStyle = styled.nav`
   width: 30rem;
   background-color: teal;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100vh;
+  height: calc(100vh - 6rem);
 `;

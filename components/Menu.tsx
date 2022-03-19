@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MenuItem from "./MenuItem";
-import { add } from "react-icons/all";
 
 const menuItems = [
   {
@@ -12,11 +11,12 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <MenuStyle>
-      {menuItems.map((menu, idx) => (
-        <MenuItem icon={} label={menu.label} />
-      ))}
-    </MenuStyle>
+    // <MenuStyle>
+    //   {menuItems.map((menu, idx) => (
+    //     // <MenuItem icon={} label={menu.label} />
+    //   ))}
+    // </MenuStyle>
+    <h1>Menu</h1>
   );
 };
 
