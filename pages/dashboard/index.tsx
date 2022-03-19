@@ -1,14 +1,22 @@
 import { Navbar } from "components/Navbar";
 import { Sidebar } from "components/Sidebar";
 import React from "react";
+import styled from "styled-components";
 
 const Dashboard = () => {
   return (
-    <div>
+    <DashboardStlye>
+      <HiddenInput type="checkbox" id="checkbox" />
       <Navbar />
       <Sidebar />
-    </div>
+    </DashboardStlye>
   );
 };
 
 export default Dashboard;
+
+const DashboardStlye = styled.div``;
+
+const HiddenInput = styled.input`
+  display: none;
+`;
