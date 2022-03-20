@@ -22,20 +22,28 @@ export const HamburgerStyle = styled.label`
     position: absolute;
     top: 50%;
     left: 20%;
-    width: 3rem;
+    width: 2.5rem;
     height: 3px;
     background-color: gray;
     border-radius: 5px;
     transition: all 0.2s linear;
 
     &:nth-child(1) {
-      transform: translateY(-1rem);
+      transform: translateY(-0.8rem);
       animation-delay: 100ms;
     }
 
     &:nth-child(3) {
-      transform: translateY(1rem);
+      transform: translateY(0.8rem);
       animation-delay: 250ms;
     }
+  }
+
+  &:hover span:nth-child(1) {
+    transform: translateY(-1rem);
+  }
+
+  &:hover span:nth-child(3) {
+    transform: translateY(1rem);
   }
 `;

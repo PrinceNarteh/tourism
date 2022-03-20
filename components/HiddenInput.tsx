@@ -15,4 +15,8 @@ export const HiddenInput = styled.input`
   &:checked ~ nav label span:nth-child(3) {
     transform: rotate(-40deg);
   }
+
+  &:checked ~ div .sidebar {
+    width: 6rem;
+  }
 `;

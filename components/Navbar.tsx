@@ -11,10 +11,16 @@ export const Navbar = () => {
 };
 
 const NavbarStyle = styled.nav`
-  height: 6rem;
-  box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10rem;
+
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+  padding: 0 2rem;
+  height: 4rem;
+  z-index: 100;
 `;
