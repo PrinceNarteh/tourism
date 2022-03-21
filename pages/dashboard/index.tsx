@@ -22,4 +22,5 @@ export default Dashboard;
 
 const Container = styled.div`
   display: flex;
+  position: sticky;
 `;

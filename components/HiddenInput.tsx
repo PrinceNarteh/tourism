@@ -17,6 +17,6 @@ export const HiddenInput = styled.input`
   }
 
   &:checked ~ div .sidebar {
-    width: 6rem;
+    width: 30rem;
   }
 `;

@@ -19,8 +19,8 @@ const SidebarStyle = styled.aside`
   justify-content: stretch;
 
   overflow: hidden;
-  width: 7.5rem;
-  height: 100vh;
+  width: 6rem;
+  height: calc(100vh - 5rem);
 
   padding-top: 1rem;
 
