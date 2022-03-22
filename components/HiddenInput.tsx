@@ -33,6 +33,16 @@ export const HiddenInput = styled.input`
         width: 8rem;
         height: 8rem;
       }
+
+      h6 {
+        font-size: 1.8rem;
+        margin-top: -1rem;
+      }
+
+      p {
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
     }
   }
 

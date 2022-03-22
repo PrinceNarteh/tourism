@@ -8,8 +8,8 @@ export const Sidebar = () => {
       <div className="sidebar__top">
         <FaUser size={30} className="icon" />
         <>
-          <h6>Admin</h6>
           <p>John Doe</p>
+          <h6>Admin</h6>
         </>
       </div>
       <div className="sidebar__middle">Middle Section</div>
