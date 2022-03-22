@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { FaUser } from "react-icons/fa";
 
 export const Sidebar = () => {
   return (
     <SidebarStyle className="sidebar">
-      <div className="sidebar__top">Top Section</div>
+      <div className="sidebar__top">
+        <FaUser size={30} className="icon" />
+        <>
+          <h6>Admin</h6>
+          <p>John Doe</p>
+        </>
+      </div>
       <div className="sidebar__middle">Middle Section</div>
       <div className="sidebar__bottom">Bottom Section</div>
     </SidebarStyle>
@@ -16,15 +23,12 @@ const SidebarStyle = styled.aside`
   flex-shrink: 0;
   align-items: center;
   flex-direction: column;
-  justify-content: stretch;
 
   overflow: hidden;
   width: 6rem;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 4rem);
 
-  padding-top: 1rem;
-
-  position: sticky;
+  position: fixed;
   left: 0;
   top: 4rem;
 
@@ -34,6 +38,11 @@ const SidebarStyle = styled.aside`
   transition: width 0.2s ease-in-out;
 
   .sidebar__top {
+    /* background-color: teal; */
+    height: 6rem;
+    text-align: center;
+    padding-top: 1rem;
+    transition: all 0.2s ease-in-out;
   }
 
   .sidebar__middle {
@@ -42,5 +51,8 @@ const SidebarStyle = styled.aside`
     overflow-x: hidden;
   }
   .sidebar__bottom {
+    font-size: 1.2rem;
+    background-color: red;
+    width: 100%;
   }
 `;

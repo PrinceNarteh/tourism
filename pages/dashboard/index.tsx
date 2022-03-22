@@ -10,10 +10,10 @@ const Dashboard = () => {
     <>
       <HiddenInput type="checkbox" id="checkbox" />
       <Navbar />
-      <Container>
+      <>
         <Sidebar />
         <Content />
-      </Container>
+      </>
     </>
   );
 };

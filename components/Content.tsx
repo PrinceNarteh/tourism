@@ -4,7 +4,7 @@ import { Summary } from "./Summary";
 
 export const Content = () => {
   return (
-    <ContentStyle>
+    <ContentStyle className="content">
       <Summary />
     </ContentStyle>
   );
@@ -12,7 +12,11 @@ export const Content = () => {
 
 const ContentStyle = styled.main`
   transition: all 0.2s ease-in-out;
-  margin: 1rem;
-  width: 100%;
+  width: calc(100% - 6rem);
+  margin-left: 6rem;
+  padding: 1rem;
   /* padding: 7rem 2rem 2rem; */
+  p {
+    font-size: 1.3rem;
+  }
 `;
