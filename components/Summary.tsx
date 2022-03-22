@@ -7,25 +7,25 @@ export const Summary = () => {
   return (
     <SummaryStyle>
       <Card
-        bgColor="blue"
+        bgColor="#1D3557"
         icon={<AiFillHdd size={30} color="#fff" />}
         label="Total Tourist Sites"
         stats={65}
       />
       <Card
-        bgColor="blue"
+        bgColor="#54414E"
         icon={<AiFillHdd size={30} color="#fff" />}
         label="Total Tourist Sites"
         stats={65}
       />
       <Card
-        bgColor="blue"
+        bgColor="#D95D39"
         icon={<AiFillHdd size={30} color="#fff" />}
         label="Total Tourist Sites"
         stats={65}
       />
       <Card
-        bgColor="blue"
+        bgColor="#5D707F"
         icon={<AiFillHdd size={30} color="#fff" />}
         label="Total Tourist Sites"
         stats={65}

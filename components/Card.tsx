@@ -28,15 +28,15 @@ const CardStyle = styled.div`
   justify-content: space-around;
   align-items: center;
   border-radius: 1rem;
-  height: 10rem;
-  min-width: 22rem;
-  max-width: 25rem;
+  height: 15rem;
+  min-width: 25rem;
+  max-width: 30rem;
   padding: 2rem;
   color: #fff;
 
   .card__icon {
     flex: 1;
-    border: 1px solid #777;
+    border: 1px solid #ccc;
     padding: 0.2rem;
     display: flex;
     justify-content: center;
@@ -51,14 +51,14 @@ const CardStyle = styled.div`
     flex: 3;
 
     h3 {
-      font-size: 1rem;
+      font-size: 2rem;
       font-weight: 400;
       letter-spacing: 1px;
       text-transform: capitalize;
     }
 
     p {
-      font-size: 3rem;
+      font-size: 5rem;
       font-weight: bolder;
     }
   }
