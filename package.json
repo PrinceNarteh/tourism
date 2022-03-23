@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
+    "mongoose": "^6.2.8",
     "next": "12.1.0",
     "next-auth": "^4.3.1",
     "react": "17.0.2",
