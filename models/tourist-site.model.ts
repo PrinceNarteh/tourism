@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const touristSiteSchema = new Schema(
+const TouristSiteSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -42,7 +42,7 @@ const touristSiteSchema = new Schema(
   }
 );
 
-touristSiteSchema.pre("save", function (next) {
+TouristSiteSchema.pre("save", function (next) {
   if (this.isModified("title")) {
     const titleArray = this.title.trim().split(" ");
     this.slug = titleArray.join("-");
@@ -50,5 +50,5 @@ touristSiteSchema.pre("save", function (next) {
   next();
 });
 
-const TouristSite = model("TouristSite", touristSiteSchema);
-export default TouristSite;
+export default mongoose.models.TouristSite ||
+  mongoose.model("TouristSite", TouristSiteSchema);
