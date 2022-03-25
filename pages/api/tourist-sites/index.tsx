@@ -13,7 +13,8 @@ export default async function handler(
   if (method === "POST") {
     const error = validCreateTouristSite.safeParse(body);
     if (!error.success) {
-      res.status(400).json({ success: false });
+      const errors = error.error.errors.map((err) => err.message);
+      return res.status(400).json({ success: false, errors });
     }
     res.status(200).json({ message: "Post created" });
   }
