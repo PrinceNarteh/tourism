@@ -1,4 +1,5 @@
 import dbConnect from "lib/dbConnect";
+import { validCreateTouristSite } from "lib/validations";
 import TouristSiteModel from "models/tourist-site.model";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -7,9 +8,13 @@ export default async function handler(
   res: NextApiResponse
 ) {
   await dbConnect();
-  const { method } = req;
+  const { method, body } = req;
 
   if (method === "POST") {
+    const error = validCreateTouristSite.safeParse(body);
+    if (!error.success) {
+      res.status(400).json({ success: false });
+    }
     res.status(200).json({ message: "Post created" });
   }
 
