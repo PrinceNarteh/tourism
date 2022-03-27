@@ -1,4 +1,4 @@
-import { Schema, model, models, Document, Model, Models } from "mongoose";
+import { Schema, model, models, Document, Model } from "mongoose";
 
 export interface ITouristSite {
   name: string;
@@ -82,11 +82,7 @@ touristSiteSchema.statics.searchBySlug = async function (slug: string) {
   return this.findOne({ slug });
 };
 
-interface mongooseModels extends Models {
-  TouristSite: Model<ITouristSiteDocument, ITouristSiteModel>;
-}
-
-export default mongooseModels.TouristSite ||
+export default models.TouristSite ||
   model<ITouristSiteDocument, ITouristSiteModel>(
     "TouristSite",
     touristSiteSchema
