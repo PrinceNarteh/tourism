@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "./Logo";
@@ -15,10 +14,12 @@ export const Navbar = () => {
 
 const NavbarStyle = styled.nav`
   position: fixed;
+  color: #fff;
 
   height: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10rem;
+  z-index: 99;
 `;
