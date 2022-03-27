@@ -7,7 +7,7 @@ const TouristSiteSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    body: {
+    description: {
       type: String,
       required: true,
     },
@@ -36,6 +36,9 @@ const TouristSiteSchema = new mongoose.Schema(
       ],
       required: true,
     },
+    slug: {
+      type: String,
+    },
   },
   {
     timestamps: true,
@@ -43,12 +46,11 @@ const TouristSiteSchema = new mongoose.Schema(
 );
 
 TouristSiteSchema.pre("save", function (next) {
-  if (this.isModified("title")) {
-    const titleArray = this.title.trim().split(" ");
-    this.slug = titleArray.join("-");
-  }
+  this.slug = this.name.trim().toLowerCase().split(" ").join("-");
   next();
 });
 
-export default mongoose.models.TouristSite ||
+const TouristSite =
+  mongoose.models.TouristSite ||
   mongoose.model("TouristSite", TouristSiteSchema);
+export default TouristSite;
