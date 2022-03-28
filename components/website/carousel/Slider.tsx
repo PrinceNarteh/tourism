@@ -1,14 +1,19 @@
-import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { Card } from "./Card";
 
-export const Slider = () => {
+interface SliderProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const Slider = ({ title, description, image }: SliderProps) => {
   return (
     <SliderStyle>
-      <img src="/images/kakum.jpg" />
+      <img src={image} />
       <Overlay />
-      <Card />
+      <Card title={title} description={description} />
     </SliderStyle>
   );
 };
@@ -16,17 +21,17 @@ export const Slider = () => {
 const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 
 const SliderStyle = styled.div`
-  width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
   position: relative;
+  overflow: hidden;
 
-  img {
+  & > img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
   }
 `;

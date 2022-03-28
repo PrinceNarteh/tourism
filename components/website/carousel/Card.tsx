@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Card = () => {
+interface CardProps {
+  title: string;
+  description: string;
+}
+
+export const Card = ({ title, description }: CardProps) => {
   return (
     <CardStyle>
-      <h3>Kakum Nation Park</h3>
-      <p>This is a canopy walk in Ghana</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </CardStyle>
   );
 };
 
 const CardStyle = styled.div`
   max-width: 30rem;
-  /* height: 10rem; */
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
