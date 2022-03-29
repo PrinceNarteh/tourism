@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 interface CardProps {
   title: string;
@@ -9,8 +10,20 @@ interface CardProps {
 export const Card = ({ title, description }: CardProps) => {
   return (
     <CardStyle>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <motion.h3
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {title}
+      </motion.h3>
+      <motion.p
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {description}
+      </motion.p>
     </CardStyle>
   );
 };
