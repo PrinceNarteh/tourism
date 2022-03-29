@@ -9,21 +9,32 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
+import { useAnimation } from "framer-motion";
 
 const sliders = [
   {
     image: "/images/kakum.jpg",
-    title: "Kakum Nation Park",
-    description: "A canopy walk in Ghana",
+    title: "Kakum National Park",
+    description:
+      "The Kakum National Park is one of the top attraction sites for tourists who intend on seeing wildlife and nature in Ghana",
   },
   {
     image: "/images/boti-falls.jpg",
     title: "Boti Water Falls",
-    description: "Water falling from rocks.",
+    description:
+      "Boti falls is a twin waterfall located at Boti in Yilo Krobo District in the Eastern Region of Ghana. These twin falls are referred to as female and male.",
+  },
+  {
+    image: "/images/cape-coast-castle.jpg",
+    title: "Cape Coast Castle",
+    description:
+      'Cape Coast Castle is one of about forty "slave castles", or large commercial forts, built on the Gold Coast of West Africa by European traders.',
   },
 ];
 
 export const Carousel = () => {
+  const h3Control = useAnimation();
+
   return (
     <Swiper
       modules={[Autoplay, Navigation, EffectFade]}
@@ -32,6 +43,12 @@ export const Carousel = () => {
       navigation
       autoplay={{ delay: 5000 }}
       effect="fade"
+      onSlideChange={() => {
+        h3Control.start({
+          x: 0,
+          transition: { duration: 1 },
+        });
+      }}
     >
       {sliders.map((slider, idx) => (
         <SwiperSlide key={idx}>
@@ -39,6 +56,7 @@ export const Carousel = () => {
             image={slider.image}
             title={slider.title}
             description={slider.description}
+            controls={h3Control}
           />
         </SwiperSlide>
       ))}

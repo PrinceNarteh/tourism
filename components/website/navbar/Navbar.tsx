@@ -15,8 +15,10 @@ export const Navbar = () => {
 const NavbarStyle = styled.nav`
   position: fixed;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
 
   height: 10rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

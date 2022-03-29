@@ -1,3 +1,4 @@
+import { AnimationControls } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { Card } from "./Card";
@@ -6,14 +7,20 @@ interface SliderProps {
   title: string;
   description: string;
   image: string;
+  controls: AnimationControls;
 }
 
-export const Slider = ({ title, description, image }: SliderProps) => {
+export const Slider = ({
+  title,
+  description,
+  image,
+  controls,
+}: SliderProps) => {
   return (
     <SliderStyle>
       <img src={image} />
       <Overlay />
-      <Card title={title} description={description} />
+      <Card title={title} description={description} controls={controls} />
     </SliderStyle>
   );
 };

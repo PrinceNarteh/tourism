@@ -1,20 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { AnimationControls, motion, useAnimation } from "framer-motion";
 
 interface CardProps {
   title: string;
   description: string;
+  controls: AnimationControls;
 }
 
-export const Card = ({ title, description }: CardProps) => {
+export const Card = ({ title, description, controls }: CardProps) => {
+  const pControl = useAnimation();
   return (
     <CardStyle>
-      <motion.h3
-        initial={{ x: 100 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 1 }}
-      >
+      <motion.h3 initial={{ x: 100 }} animate={controls}>
         {title}
       </motion.h3>
       <motion.p
@@ -29,7 +27,7 @@ export const Card = ({ title, description }: CardProps) => {
 };
 
 const CardStyle = styled.div`
-  max-width: 30rem;
+  max-width: 40rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -39,7 +37,7 @@ const CardStyle = styled.div`
   border-radius: 0.5rem;
 
   h3 {
-    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-size: clamp(1.2rem, 1.6vw, 3rem);
     font-weight: 400;
   }
 
