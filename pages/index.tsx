@@ -2,6 +2,7 @@ import { Navbar } from "components/website/navbar/Navbar";
 import { Carousel } from "components/website/carousel/Carousel";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Discover } from "components/website/discover/Discover";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
       <main>
         <Navbar />
         <Carousel />
-        <h1>Welcome to my site</h1>
+        <Discover />
       </main>
     </div>
   );
