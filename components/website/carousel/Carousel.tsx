@@ -10,22 +10,25 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { useAnimation } from "framer-motion";
+import Kakum from "assets/images/kakum.jpg";
+import BotiFalls from "assets/images/boti-falls.jpg";
+import CapeCoastCastle from "assets/images/cape-coast-castle.jpg";
 
 const sliders = [
   {
-    image: "/images/kakum.jpg",
+    image: Kakum,
     title: "Kakum National Park",
     description:
       "The Kakum National Park is one of the top attraction sites for tourists who intend on seeing wildlife and nature in Ghana",
   },
   {
-    image: "/images/boti-falls.jpg",
+    image: BotiFalls,
     title: "Boti Water Falls",
     description:
       "Boti falls is a twin waterfall located at Boti in Yilo Krobo District in the Eastern Region of Ghana. These twin falls are referred to as female and male.",
   },
   {
-    image: "/images/cape-coast-castle.jpg",
+    image: CapeCoastCastle,
     title: "Cape Coast Castle",
     description:
       'Cape Coast Castle is one of about forty "slave castles", or large commercial forts, built on the Gold Coast of West Africa by European traders.',
