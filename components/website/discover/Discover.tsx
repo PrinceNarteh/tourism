@@ -2,18 +2,14 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
+import Kakum from "../../../public/images/kakum.jpg";
 
 export const Discover = () => {
   return (
     <Container>
       <DiscoverStyle>
         <div>
-          <Image
-            src="/images/kakum.jpg"
-            height="360"
-            width="250"
-            layout="fill"
-          />
+          <Image src={Kakum} objectFit="contain" />
         </div>
         <div></div>
         <div></div>
