@@ -2,14 +2,19 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
-import Kakum from "../../../public/images/kakum.jpg";
+import Kakum from "assets/images/kakum.jpg";
 
 export const Discover = () => {
   return (
     <Container>
       <DiscoverStyle>
         <div>
-          <Image src={Kakum} objectFit="contain" />
+          <Image
+            src={Kakum}
+            height={400}
+            layout="fixed"
+            objectPosition="center"
+          />
         </div>
         <div></div>
         <div></div>
@@ -26,7 +31,9 @@ const DiscoverStyle = styled.div`
   grid-auto-rows: 360px;
 
   div {
-    /* background-color: crimson; */
+    background-color: crimson;
+    position: relative;
     margin: 2rem;
+    overflow: hidden;
   }
 `;

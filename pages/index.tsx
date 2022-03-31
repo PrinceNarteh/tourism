@@ -1,8 +1,8 @@
-import { Navbar } from "components/website/navbar/Navbar";
 import { Carousel } from "components/website/carousel/Carousel";
+import { Discover } from "components/website/discover/Discover";
+import { Navbar } from "components/website/navbar/Navbar";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Discover } from "components/website/discover/Discover";
 
 const Home: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
-import { HiddenInput } from "components/HiddenInput";
-import { Content } from "components/Content";
-import { Navbar } from "components/Navbar";
-import { Sidebar } from "components/Sidebar";
+import { HiddenInput } from "components/dashboard/HiddenInput";
+import { Content } from "components/dashboard/Content";
+import { Navbar } from "components/dashboard/Navbar";
+import { Sidebar } from "components/dashboard/Sidebar";
 import React from "react";
 import styled from "styled-components";
 
