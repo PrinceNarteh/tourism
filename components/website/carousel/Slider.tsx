@@ -19,7 +19,7 @@ export const Slider = ({
 }: SliderProps) => {
   return (
     <SliderStyle>
-      <Image src={image} objectFit="cover" layout="fill" />
+      <Image src={image} objectFit="cover" layout="responsive" />
       <Overlay />
       <Card title={title} description={description} controls={controls} />
     </SliderStyle>
