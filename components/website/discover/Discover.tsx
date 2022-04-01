@@ -27,13 +27,18 @@ export const Discover = () => {
 
 const DiscoverStyle = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 360px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 400px;
 
   div {
     background-color: crimson;
     position: relative;
     margin: 2rem;
     overflow: hidden;
+
+    &:hover img {
+      transition: all 0.3s linear;
+      transform: scale(1.1);
+    }
   }
 `;

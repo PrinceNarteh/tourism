@@ -27,7 +27,7 @@ export const Card = ({ title, description, controls }: CardProps) => {
 };
 
 const CardStyle = styled.div`
-  max-width: 40rem;
+  max-width: 45rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -39,6 +39,8 @@ const CardStyle = styled.div`
   h3 {
     font-size: clamp(1.2rem, 1.6vw, 3rem);
     font-weight: 400;
+    font-weight: bold;
+    letter-spacing: 5px;
   }
 
   p {
