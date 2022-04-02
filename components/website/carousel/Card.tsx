@@ -5,20 +5,23 @@ import { AnimationControls, motion, useAnimation } from "framer-motion";
 interface CardProps {
   title: string;
   description: string;
-  controls: AnimationControls;
 }
 
-export const Card = ({ title, description, controls }: CardProps) => {
+export const Card = ({ title, description }: CardProps) => {
   const pControl = useAnimation();
   return (
     <CardStyle>
-      <motion.h3 initial={{ x: 100 }} animate={controls}>
+      <motion.h3
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 2 }}
+      >
         {title}
       </motion.h3>
       <motion.p
         initial={{ x: -100 }}
         animate={{ x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
         {description}
       </motion.p>

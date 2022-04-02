@@ -11,17 +11,12 @@ interface SliderProps {
   controls: AnimationControls;
 }
 
-export const Slider = ({
-  title,
-  description,
-  image,
-  controls,
-}: SliderProps) => {
+export const Slider = ({ title, description, image }: SliderProps) => {
   return (
     <SliderStyle>
       <Image src={image} objectFit="cover" layout="responsive" />
       <Overlay />
-      <Card title={title} description={description} controls={controls} />
+      <Card title={title} description={description} />
     </SliderStyle>
   );
 };

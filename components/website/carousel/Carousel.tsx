@@ -45,13 +45,6 @@ export const Carousel = () => {
       speed={2000}
       navigation
       autoplay={{ delay: 5000 }}
-      effect="fade"
-      onSlideChange={() => {
-        h3Control.start({
-          x: 0,
-          transition: { duration: 1 },
-        });
-      }}
     >
       {sliders.map((slider, idx) => (
         <SwiperSlide key={idx}>
