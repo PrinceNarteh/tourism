@@ -1,18 +1,15 @@
+import { useAnimation } from "framer-motion";
 import React from "react";
-import styled from "styled-components";
-import { Slider } from "./Slider";
 
 // SwiperJS
+import { Autoplay, EffectFade, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, EffectFade } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
-import { useAnimation } from "framer-motion";
-import Kakum from "assets/images/kakum.jpg";
+import "swiper/css/bundle";
+import { Slider } from "./Slider";
+
 import BotiFalls from "assets/images/boti-falls.jpg";
 import CapeCoastCastle from "assets/images/cape-coast-castle.jpg";
+import Kakum from "assets/images/kakum.jpg";
 
 const sliders = [
   {
