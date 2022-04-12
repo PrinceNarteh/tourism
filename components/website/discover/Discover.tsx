@@ -10,12 +10,6 @@ export const Discover = () => {
       <Heading>Check Our Tourist Sites</Heading>
       <DiscoverStyle>
         <div>
-          <Image
-            src={Kakum}
-            height={400}
-            layout="fixed"
-            objectPosition="center"
-          />
           <div className="content">
             <h4>Cape Coast</h4>
             <h3>Kakum National Park</h3>
