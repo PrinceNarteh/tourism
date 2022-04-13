@@ -2,57 +2,34 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
-import Kakum from "assets/images/kakum.jpg";
+import Kakum from "assets/images/kakum-small.jpg";
 
 export const Discover = () => {
   return (
-    <Container>
-      <Heading>Check Our Tourist Sites</Heading>
-      <DiscoverStyle>
-        <div>
-          <div className="content">
-            <h4>Cape Coast</h4>
-            <h3>Kakum National Park</h3>
+    <div className="p-10 grid grid-cols-1 max-w-6xl mx-auto gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="rounded-lg overflow-hidden relative group cursor-pointer">
+        <div className="p-5 text-gray-200 absolute h-full  z-10">
+          <div className="border-2 w-full h-full rounded-lg p-5 border-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id
+            unde tempora autem fuga? Quibusdam, consequatur obcaecati, ullam
+            veniam harum commodi corrupti exercitationem velit a magni fugit
+            quasi aspernatur eaque.
           </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </DiscoverStyle>
-    </Container>
+        <div className="absolute bg-black w-full h-full opacity-50"></div>
+        <Image
+          layout="fill"
+          // objectFit="cover"
+          className="-z-10 transition ease-in-out duration-500 transform group-hover:scale-110"
+          src={Kakum}
+        />
+      </div>
+      <div>
+        <Image src={Kakum} />
+      </div>
+      <div>
+        <Image src={Kakum} />
+      </div>
+    </div>
   );
 };
-
-const Heading = styled.h1`
-  font-size: 3vw;
-  font-weight: 400;
-`;
-
-const DiscoverStyle = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 400px;
-  cursor: pointer;
-
-  div {
-    background-color: crimson;
-    position: relative;
-    margin: 2rem;
-    overflow: hidden;
-
-    &:hover img {
-      transition: all 0.3s linear;
-      transform: scale(1.1);
-    }
-
-    .content {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: teal;
-      inset: 0;
-      z-index: 2;
-    }
-  }
-`;
