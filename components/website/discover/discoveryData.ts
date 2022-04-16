@@ -1,6 +1,7 @@
 import Kakum from "assets/images/kakum-small.jpg";
 import CapeCoastCastle from "assets/images/cape-coast-castle-sm.jpg";
 import BotiFalls from "assets/images/boti-falls-sm.jpg";
+import LarabangaMosque from "assets/images/larabanga-mosque-sm.jpg";
 
 interface IDiscoveries {
   title: string;
@@ -23,5 +24,10 @@ export const discoveries: IDiscoveries[] = [
     title: "Kakum National Park",
     location: "Cape Coast",
     image: Kakum,
+  },
+  {
+    title: "Larabanga Mosque",
+    location: "Larabanga",
+    image: LarabangaMosque,
   },
 ];
