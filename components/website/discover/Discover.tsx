@@ -11,6 +11,9 @@ export const Discover = () => {
       <DiscoveryCard />
       <DiscoveryCard />
       <DiscoveryCard />
+      <DiscoveryCard />
+      <DiscoveryCard />
+      <DiscoveryCard />
     </div>
   );
 };
