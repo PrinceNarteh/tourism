@@ -2,6 +2,7 @@ import BotiFalls from "assets/images/boti-falls.jpg";
 import CapeCoastCastle from "assets/images/cape-coast-castle.jpg";
 import Kakum from "assets/images/kakum.jpg";
 import LarabangaMosque from "assets/images/larabanga-mosque.jpg";
+import ElminaCastle from "assets/images/elmina-castle.jpg";
 
 export const sliders = [
   {
@@ -27,5 +28,10 @@ export const sliders = [
     title: "Larabanga Mosque",
     description:
       'The Larabanga Mosque is the oldest in Ghana and is located in Larabanga in the Northern Region of Ghana (Savannah Region). It was built in 1421 and is usually referred to as "the Mecca of West Africa".',
+  },
+  {
+    image: ElminaCastle,
+    title: "Elmina Castle",
+    description: "",
   },
 ];
